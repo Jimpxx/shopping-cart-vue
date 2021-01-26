@@ -1,6 +1,5 @@
 export default {
     addItemToCart(state, payload) {
-        console.log('mutation: ', payload);
         const prodId = payload.id;
         const itemExists = state.items.findIndex(
             (item) => item.productId === prodId,
@@ -10,7 +9,6 @@ export default {
             state.items[itemExists].qty += 1;
         } else {
             const newItem = {
-                // id: new Date().toISOString(),
                 productId: payload.id,
                 title: payload.title,
                 image: payload.image,
@@ -26,7 +24,6 @@ export default {
         const prod = state.items.findIndex(
             (item) => item.productId === payload,
         );
-        console.log(prod);
         state.qty -= 1;
         state.total -= state.items[prod].price;
         if (state.items[prod].qty === 1) {
