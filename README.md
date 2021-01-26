@@ -4,4 +4,4 @@ This is a demo shop-page with a shopping cart, no payment function is implemente
 
 The products displayed on the site is fetched from [FakestoreAPI](https://fakestoreapi.com/).
 
-You can view the demo site at [shopping-cart-vue3.surge.sh](http://shopping-cart-vue3.surge.sh).
+You can view the demo site at [shopping-cart-vue3.surge.sh](https://shopping-cart-vue3.surge.sh).
