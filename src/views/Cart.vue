@@ -4,7 +4,9 @@
         <cart-item v-for="item in cart" :key="item.id" :item="item">
         </cart-item>
     </div>
-    <div class="total-price">{{ total }} with {{ qty }} items in the cart</div>
+    <div class="total-price">
+        Total: {{ total }}$ with {{ qty }} items in the cart
+    </div>
 </template>
 
 <script>
@@ -32,4 +34,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.total-price {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+}
+</style>

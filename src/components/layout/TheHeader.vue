@@ -1,10 +1,15 @@
 <template>
     <header>
         <nav>
-            <!-- <router-link to="/">Home</router-link> |
+            <div class="logo">
+                <router-link to="/"><span>Vue Shop</span></router-link>
+            </div>
+            <div class="links">
+                <!-- <router-link to="/">Home</router-link> |
             <router-link to="/about">About</router-link> -->
-            <router-link to="/products">Products</router-link>
-            <router-link to="/cart">Cart ({{ qty }})</router-link>
+                <router-link to="/products">Products</router-link>
+                <router-link to="/cart">Cart ({{ qty }})</router-link>
+            </div>
         </nav>
     </header>
 </template>
@@ -21,17 +26,26 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 nav {
-    padding: 30px;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    background: #270041;
+    color: #fff;
+    .logo {
+        font-size: 2rem;
+    }
     a {
         font-weight: bold;
-        color: #2c3e50;
+        color: #fff;
+        // color: #2c3e50;
+        text-decoration: none;
         margin-right: 1rem;
 
         &.router-link-exact-active {
-            color: #42b983;
+            color: #ac84c7;
         }
     }
 }
